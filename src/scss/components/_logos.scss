@@ -1,0 +1,12 @@
+.section-logos {
+    padding-block: 40px;
+    .container {
+        &-logos {
+            .logos {
+                &-img {
+                    max-width: 192px;
+                }
+            }
+        }
+    }
+}

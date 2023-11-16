@@ -1,0 +1,78 @@
+.navbar {
+    background-color: $black;
+    position: sticky;
+    top: 0;
+    z-index: 99;
+    .container {
+        padding-block: 24px;
+        &-nav {
+            position: relative;
+
+            @include responsive(md) {
+                flex-direction: row;
+            }
+
+            .nav {
+                &-btn-responsive {
+                    background-image: url("../../../assets/image/ic-menu.svg");
+                    width: 36px;
+                    height: 20px;
+                    border: none;
+                    background-color: transparent;
+                    @include responsive(md) {
+                        width: 30px;
+                    }
+                }
+
+                &-logo {
+                    max-width: 130px;
+                    @include responsive(md) {
+                        max-width: 92px;
+                    }
+                }
+
+                &-buttons {
+                    @include flex(row, center, space-between);
+                    gap: 24px;
+
+                    .btn-link {
+                        text-decoration: none;
+                        font-size: 16px;
+                    }
+                }
+            }
+
+            .nav-wrapper {
+                @include responsive(md) {
+                    position: absolute;
+                    top: 100%;
+                    left: 0;
+                    right: 0;
+                    height: 100vh;
+                    @include flex(column, center, center);
+                    z-index: 3;
+                    height: 0;
+                    transition: all 500ms ease;
+                    background-color: $black;
+                    .btn-link {
+                        opacity: 0;
+                    }
+                    &.active {
+                        height: 100vh;
+                        .btn-link {
+                            opacity: 1;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+.cross {
+    background-image: url("../../../assets/image/cross-white.svg") !important;
+    background-repeat: no-repeat;
+    background-size: 24px 24px;
+    width: 30px;
+    height: 24px;
+}

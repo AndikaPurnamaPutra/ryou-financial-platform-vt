@@ -1,0 +1,100 @@
+:root {
+  $spacer: 1rem !default;
+  $spacers: (
+    0: 0,
+    // 0px
+    xs: $spacer * 0.125,
+    // 2px
+    sm: $spacer * 0.25,
+    // 4px
+    md: $spacer * 0.5,
+    // 8px
+    lg: $spacer * 0.75,
+    // 12px
+    xl: $spacer,
+    // 16px
+    2xl: $spacer * 1.25,
+    // 20px
+    3xl: $spacer * 1.5,
+    // 24px
+    4xl: $spacer * 2,
+    // 32px
+    5xl: $spacer * 3,
+    // 48px
+    6xl: $spacer * 4,
+    // 64px
+  ) !default;
+
+  @each $key, $var in $spacers {
+    --m-#{$key}: #{$var};
+    --mt-#{$key}: #{$var};
+    --me-#{$key}: #{$var};
+    --mb-#{$key}: #{$var};
+    --ms-#{$key}: #{$var};
+    --p-#{$key}: #{$var};
+    --pt-#{$key}: #{$var};
+    --pe-#{$key}: #{$var};
+    --pb-#{$key}: #{$var};
+    --ps-#{$key}: #{$var};
+  }
+}
+
+//font families
+$fontFamily: 'Inter', sans-serif;
+
+//media breakpoint
+$media: (
+  xs: 0px,
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px,
+);
+
+.img,
+.ic {
+  width: 100%;
+}
+
+html {
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+}
+
+body {
+  -webkit-font-smoothing: antialiased;
+  overflow: hidden;
+}
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+html,
+body,
+button {
+  padding: 0;
+  font-family: $fontFamily;
+}
+button {
+  cursor: pointer;
+  padding: 0;
+}
+ul,
+li {
+  list-style: none;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+@mixin responsive($breakpoint) {
+  @each $breakpoints, $size in $media {
+    @if $breakpoint == $breakpoints {
+      @media screen and (max-width: $size) {
+        @content;
+      }
+    }
+  }
+}

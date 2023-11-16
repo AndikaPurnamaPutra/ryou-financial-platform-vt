@@ -1,0 +1,109 @@
+.section-benefit {
+  padding-block: 100px;
+  @include responsive(md) {
+    padding-block: 50px;
+  }
+  .container {
+    &-benefit {
+      @include flex(column, center, center);
+      gap: 70px;
+      @include responsive(md) {
+        gap: 54px;
+      }
+      .content {
+        &-top {
+          .subtext-text {
+            @include flex(column, center, center);
+            gap: 16px;
+            max-width: 816px;
+            @include responsive(md) {
+              max-width: 100%;
+            }
+            &-span {
+              color: $secondary;
+              font-family: $font-desc;
+              font-size: 16px;
+              font-style: normal;
+              font-weight: 400;
+              line-height: normal;
+              letter-spacing: 0.64px;
+            }
+
+            &-display {
+              color: $black;
+              text-align: center;
+              font-family: $font-display;
+              font-size: 42px;
+              font-style: normal;
+              font-weight: 700;
+              line-height: 52px;
+              /* 123.81% */
+              letter-spacing: 1.68px;
+
+              @include responsive(md) {
+                font-size: 32px;
+                line-height: 42px;
+              }
+            }
+
+            &-desc {
+              color: $black;
+              text-align: center;
+              font-family: $font-desc;
+              font-size: 18px;
+              font-style: normal;
+              font-weight: 400;
+              line-height: 32px;
+              /* 177.778% */
+              letter-spacing: 0.72px;
+              @include responsive(md) {
+                  font-size: 16px;
+                }
+            }
+          }
+        }
+
+        &-bottom {
+          @include flex(row, center, space-between);
+          gap: 40px;
+          @include responsive(md) {
+            gap: 20px;
+          }
+          @include responsive(sm) {
+            flex-direction: column;
+          }
+          .card {
+            @include flex(column, center, space-between);
+            gap: 24px;
+            background-color: $black;
+            padding: 92px 100px 96px;
+            border-radius: 40px;
+            &-img {
+              max-width: 183px;
+              @include responsive(xl) {
+                max-width: 162px;
+              }
+            }
+
+            &-title {
+              color: $white;
+              text-align: center;
+              font-family: $font-display;
+              font-size: 32px;
+              font-style: normal;
+              font-weight: 700;
+              line-height: 44px;
+              /* 137.5% */
+              max-width: 255px;
+
+              @include responsive(md) {
+                font-size: 26px;
+                line-height: 32px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

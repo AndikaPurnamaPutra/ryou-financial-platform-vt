@@ -1,0 +1,99 @@
+.section-blogs {
+  padding-block: 150px;
+
+  @include responsive(md) {
+    padding-block: 75px;
+  }
+  .container {
+    &-blogs {
+      @include flex(column, center, center);
+      gap: 60px;
+
+      .content {
+        &-top {
+          @include flex(row, center, space-between);
+          max-width: 1017px;
+          width: 100%;
+          border-bottom: 1px solid rgba($color: #000000, $alpha: 0.1);
+          padding-bottom: 60px;
+
+          @include responsive(md) {
+            padding-bottom: 30px;
+          }
+
+          @include responsive(sm) {
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 16px;
+          }
+
+          .subtext {
+            &-subtitle {
+              color: $black;
+              font-family: $font-desc;
+              font-size: 18px;
+              font-style: normal;
+              font-weight: 600;
+              line-height: normal;
+            }
+          }
+        }
+
+        &-bottom {
+          .wrapper-cards {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            row-gap: 60px;
+            column-gap: 84px;
+
+            @include responsive(md) {
+              grid-template-columns: repeat(2, 1fr);
+              row-gap: 30px;
+              column-gap: 42px;
+            }
+            @include responsive(sm) {
+              grid-template-columns: repeat(1, 1fr);
+              gap: 30px;
+            }
+
+            .card {
+              max-width: 287px;
+              @include flex(column, flex-start, space-between);
+
+              @include responsive(md) {
+                max-width: 100%;
+              }
+
+              &-body {
+                .title {
+                  color: $black;
+                  font-family: $font-desc;
+                  font-size: 24px;
+                  font-style: normal;
+                  font-weight: 400;
+                  line-height: normal;
+                  margin-top: 20px;
+                  margin-bottom: 40px;
+
+                  @include responsive(md) {
+                    font-size: 18px;
+                  }
+                }
+
+                .date {
+                  color: $black;
+                  font-family: $font-desc;
+                  font-size: 14px;
+                  font-style: normal;
+                  font-weight: 400;
+                  line-height: normal;
+                  letter-spacing: 0.56px;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

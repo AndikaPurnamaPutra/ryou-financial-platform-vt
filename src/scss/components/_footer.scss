@@ -1,0 +1,205 @@
+.footer {
+  background-color: $black;
+  padding-block: 120px;
+
+  @include responsive(md) {
+    padding-block: 60px;
+  }
+
+  .container {
+    &-footer {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 60px;
+
+      .content {
+        &-top {
+          @include flex(column, flex-start, space-between);
+          gap: 80px;
+          width: 100%;
+
+          @include responsive(md) {
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 16px;
+          }
+
+          .subtext {
+            &-text {
+              @include flex(row, center, space-between);
+              max-width: 1145px;
+              width: inherit;
+
+              @include responsive(md) {
+                flex-direction: column-reverse;
+                align-items: flex-start;
+                gap: 24px;
+              }
+
+              &-display {
+                color: $white;
+                font-family: $font-display;
+                font-size: 70px;
+                font-style: normal;
+                font-weight: 700;
+                line-height: normal;
+                letter-spacing: 2.8px;
+                max-width: 605px;
+
+                @include responsive(xl) {
+                  font-size: 54px;
+                }
+
+                @include responsive(md) {
+                  font-size: 38px;
+                }
+              }
+
+              &-desc {
+                color: $white;
+                font-family: $font-desc;
+                font-size: 16px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: normal;
+                letter-spacing: 0.64px;
+                max-width: 605px;
+              }
+
+              .img-logo {
+                max-width: 192px;
+
+                @include responsive(xl) {
+                  max-width: 164px;
+                }
+
+                @include responsive(md) {
+                  max-width: 118px;
+                }
+              }
+            }
+          }
+        }
+
+        &-bottom {
+          @include flex(row, flex-end, space-between);
+          width: 100%;
+
+          @include responsive(md) {
+            @include flex(column, flex-start, space-between);
+            gap: 54px;
+          }
+
+          .social-media {
+            @include flex(column, flex-start, space-between);
+            gap: 22px;
+
+            @include responsive(md) {
+              width: 100%;
+            }
+
+            .item {
+              display: grid;
+              grid-template-columns: repeat(3, 1fr);
+              padding-bottom: 23px;
+              border-bottom: 1px solid rgba($color: #ffffff, $alpha: 0.21);
+              width: 100%;
+
+              .logo {
+                @include flex(row, center, flex-start);
+                gap: 20px;
+
+                @include responsive(sm) {
+                  gap: 8px;
+                }
+
+                img {
+                  max-width: 32px;
+                }
+
+                span {
+                  color: $white;
+                  font-family: $font-desc;
+                  font-size: 18px;
+                  font-style: normal;
+                  font-weight: 600;
+                  line-height: 32px;
+                  /* 177.778% */
+                  letter-spacing: 0.72px;
+                  @include responsive(sm) {
+                    font-size: 14px;
+                  }
+                }
+              }
+
+              .btn-link {
+                opacity: 0.5;
+                font-weight: 400;
+                text-decoration: unset;
+              }
+
+              .nav-link {
+                color: $white;
+                text-align: right;
+                font-family: $font-desc;
+                font-size: 16px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: 32px;
+                /* 200% */
+                letter-spacing: 0.64px;
+                opacity: 0.5;
+                @include responsive(sm) {
+                  font-size: 14px;
+                }
+              }
+            }
+          }
+
+          .company {
+            @include flex(column, flex-start, space-between);
+            gap: 24px;
+
+            @include responsive(md) {
+              width: 100%;
+            }
+
+            &-title {
+              color: $white;
+              font-family: $font-desc;
+              font-size: 18px;
+              font-style: normal;
+              font-weight: 400;
+              line-height: normal;
+              letter-spacing: 0.72px;
+            }
+
+            .wrapper-btn {
+              @include flex(column, flex-start, space-between);
+              width: 100%;
+              gap: 18px;
+
+              .btn-link {
+                text-decoration: unset;
+                justify-content: space-between;
+                width: inherit;
+                padding-bottom: 13px;
+                border-bottom: 1px solid rgba($color: #ffffff, $alpha: 0.21);
+              }
+            }
+
+            &-mark {
+              color: $white;
+              font-family: $font-desc;
+              font-size: 14px;
+              font-style: normal;
+              font-weight: 400;
+              line-height: normal;
+              letter-spacing: 0.56px;
+            }
+          }
+        }
+      }
+    }
+  }
+}

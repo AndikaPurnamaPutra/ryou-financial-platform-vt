@@ -1,0 +1,138 @@
+.section-reward {
+  background-color: $black;
+  
+  .container {
+    &-reward {
+      padding-top: 80px;
+      padding-bottom: 57px;
+      position: relative;
+
+      @include responsive(md) {
+        align-items: flex-start;
+        padding-top: 40px;
+        padding-bottom: 30px;
+        gap: 32px;
+      }
+
+      .content {
+        &-left {
+          @include flex(column, flex-start, space-between);
+          gap: 54px;
+          z-index: 2;
+          @include responsive(md) {
+            gap: 32px;
+          }
+
+          .subtext {
+            &-text {
+              @include flex(row, flex-start, space-between);
+
+              &:nth-child(odd) {
+                flex-direction: column;
+                gap: 286px;
+                @include responsive(md) {
+                  gap: 16px;
+                }
+              }
+
+              &:nth-child(even) {
+                gap: 265px;
+                align-items: center;
+                @include responsive(xl) {
+                  gap: 92px;
+                }
+                @include responsive(md) {
+                  flex-direction: column;
+                  align-items: flex-start;
+                  gap: 16px;
+                }
+              }
+
+              &-desc {
+                color: $white;
+                font-family: $font-desc;
+                font-size: 24px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: normal;
+                max-width: 491px;
+                @include responsive(md) {
+                  font-size: 16px;
+                }
+              }
+
+              &-span {
+                @include flex(row, center, space-between);
+                gap: 12px;
+                color: $white;
+                font-family: $font-desc;
+                font-size: 14px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: normal;
+                letter-spacing: 0.56px;
+
+                .label {
+                  font-weight: 700;
+                  padding: 4px 10px;
+                  background-color: $primary;
+                  border-radius: 50px;
+                }
+              }
+
+              &-display {
+                color: $white;
+                font-family: $font-display;
+                font-size: 42px;
+                font-style: normal;
+                font-weight: 700;
+                line-height: 52px;
+                /* 123.81% */
+                letter-spacing: 1.68px;
+                @include responsive(md) {
+                  font-size: 32px;
+                }
+              }
+            }
+          }
+        }
+
+        &-right {
+          .wrapper-card {
+            display: flex;
+            align-items: center;
+            position: absolute;
+            top: 0;
+            bottom: -10%;
+            left: 52%;
+
+            @include responsive(md) {
+              position: relative;
+            }
+
+            @include responsive(sm) {
+              left: 47%;
+            }
+
+            .card {
+              margin-inline: -32%;
+              &:nth-child(1) {
+                img {
+                  max-width: 558px;
+                }
+              }
+              &:nth-child(2) {
+                img {
+                  max-width: 650px;
+                }
+              }
+              &-img {
+                max-width: 764px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

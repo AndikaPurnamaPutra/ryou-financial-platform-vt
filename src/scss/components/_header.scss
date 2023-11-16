@@ -1,0 +1,292 @@
+.section-header {
+  background-color: $black;
+  padding-block: 100px;
+
+  @include responsive(md) {
+    padding-block: 50px;
+  }
+
+  .container {
+    &-header {
+      @include flex(column, center, space-between);
+      gap: 8px;
+      position: relative;
+      z-index: 1;
+
+      @include responsive(md) {
+        gap: 24px;
+      }
+
+      .content {
+        &-top {
+          .subtext-display {
+            color: $white;
+            font-family: $font-display;
+            font-size: 218px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: 191px;
+
+            /* 87.615% */
+            @include responsive(xl) {
+              font-size: 154px;
+              line-height: 134px;
+            }
+
+            @include responsive(md) {
+              font-size: 124px;
+              line-height: 114px;
+            }
+
+            @include responsive(sm) {
+              font-size: 54px;
+              line-height: 52px;
+            }
+          }
+        }
+
+        &-bottom {
+          @include flex(row, center, space-between);
+
+          @include responsive(md) {
+            @include flex(column-reverse, flex-start, space-between);
+            gap: 24px;
+          }
+
+          .subtext {
+            @include flex(column, flex-start, space-between);
+            gap: 116px;
+
+            @include responsive(md) {
+              width: 60%;
+            }
+
+            @include responsive(sm) {
+              width: 100%;
+              gap: 32px;
+            }
+
+            &-text {
+              @include flex(row, center, space-between);
+              gap: 48px;
+
+              @include responsive(xl) {
+                gap: 24px;
+              }
+
+              &-desc {
+                color: $white;
+                font-family: $font-desc;
+                font-size: 24px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: 36px;
+                /* 150% */
+                letter-spacing: 0.96px;
+
+                @include responsive(xl) {
+                  font-size: 20px;
+                }
+              }
+            }
+
+            .achivement {
+              @include flex(row, center, flex-start);
+              gap: 24px;
+
+              @include responsive(xl) {
+                gap: 16px;
+              }
+
+              &-img {
+                max-width: 71px;
+
+                @include responsive(xl) {
+                  max-width: 52px;
+                }
+              }
+
+              &-text {
+                &-title {
+                  color: $white;
+                  font-family: $font-desc;
+                  font-size: 24px;
+                  font-style: normal;
+                  font-weight: 700;
+                  line-height: normal;
+
+                  @include responsive(xl) {
+                    font-size: 20px;
+                  }
+                }
+
+                &-subtitle {
+                  color: $white;
+                  font-family: $font-desc;
+                  font-size: 14px;
+                  font-style: normal;
+                  font-weight: 400;
+                  line-height: normal;
+                  letter-spacing: 0.56px;
+                }
+              }
+            }
+          }
+
+          .card-wrap {
+            @include flex(row, null, space-between);
+            gap: 40px;
+
+            @include responsive(xl) {
+              gap: 20px;
+            }
+
+            @include responsive(md) {
+              width: 80%;
+            }
+
+            @include responsive(sm) {
+              width: 100%;
+              flex-direction: column;
+            }
+
+            .card {
+              border-radius: 20px;
+              display: inline-flex;
+              flex-direction: column;
+
+              &-1 {
+                background-color: $secondary;
+                padding: 28px 14px 0;
+
+                .card-title {
+                  color: $white;
+                  text-align: center;
+                  font-family: $font-display;
+                  font-size: 38px;
+                  font-style: normal;
+                  font-weight: 700;
+                  line-height: 34px;
+                  /* 89.474% */
+                  letter-spacing: 1.52px;
+                  margin-bottom: -72px;
+
+                  @include responsive(xl) {
+                    font-size: 28px;
+                    margin-bottom: -52px;
+                  }
+
+                  @include responsive(md) {
+                    margin-bottom: -48px;
+                  }
+                }
+
+                .card-image {
+                  max-width: 362px;
+                  padding-left: 19px;
+
+                  @include responsive(xl) {
+                    padding-left: 0;
+                  }
+                }
+              }
+
+              &-2 {
+                background-color: $white;
+                position: relative;
+                padding: 40px 68px 87px 40px;
+                gap: 24px;
+                background-image: url(/assets/image/ryou-img-card-pattern.svg);
+                // background-size: cover;
+                background-repeat: no-repeat;
+                background-position: top 128% left 85%;
+
+                @include responsive(xl) {
+                  padding: 20px 48px 57px 20px;
+                  gap: 16px;
+                }
+
+                .card-title {
+                  color: $black;
+                  font-family: $font-display;
+                  font-size: 32px;
+                  font-style: normal;
+                  font-weight: 700;
+                  line-height: 34px;
+                  /* 106.25% */
+                  letter-spacing: 1.28px;
+
+                  @include responsive(xl) {
+                    font-size: 26px;
+                    line-height: 30px;
+                  }
+                }
+
+                .card-desc {
+                  color: $black;
+                  font-family: $font-desc;
+                  font-size: 14px;
+                  font-style: normal;
+                  font-weight: 400;
+                  line-height: 28px;
+                  /* 200% */
+                  letter-spacing: 0.56px;
+                  width: 275px;
+
+                  @include responsive(xl) {
+                    width: 212px;
+                  }
+
+                  @include responsive(md) {
+                    width: 100%;
+                  }
+                }
+
+                .img-decoration {
+                  position: absolute;
+                  top: -22px;
+                  right: -34px;
+                  max-width: 110px;
+                  @include animation(rotate 5s linear infinite);
+
+                  @include responsive(xl) {
+                    max-width: 82px;
+                  }
+
+                  @include responsive(sm) {
+                    max-width: 64px;
+                    top: -10px;
+                    right: -15px;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+
+      .header-pattern {
+        position: absolute;
+        left: -111px;
+        bottom: -164px;
+        max-width: 611px;
+        z-index: -1;
+
+        @include responsive(xl) {
+          left: -154px;
+          max-width: 552px;
+        }
+      }
+    }
+  }
+}
+
+@include keyframes(rotate) {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
