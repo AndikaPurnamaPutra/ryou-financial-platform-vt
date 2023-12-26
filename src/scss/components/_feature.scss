@@ -3,7 +3,7 @@
   padding-top: 100px;
   padding-bottom: 200px;
 
-  @include responsive(md) {
+  @include responsive(lg) {
     padding-top: 50px;
     padding-bottom: 100px;
   }
@@ -14,7 +14,7 @@
       align-items: flex-start;
       gap: 226px;
 
-      @include responsive(md) {
+      @include responsive(lg) {
         gap: 114px;
       }
 
@@ -58,7 +58,7 @@
                 margin-top: 16px;
                 margin-bottom: 24px;
 
-                @include responsive(md) {
+                @include responsive(lg) {
                   font-size: 32px;
                   line-height: 42px;
                 }
@@ -83,7 +83,8 @@
                 /* 177.778% */
                 letter-spacing: 0.72px;
                 max-width: 706px;
-                @include responsive(md) {
+
+                @include responsive(lg) {
                   font-size: 16px;
                 }
               }
@@ -111,7 +112,7 @@
               max-width: 246px;
             }
 
-            @include responsive(md) {
+            @include responsive(lg) {
               display: none;
             }
           }
@@ -121,11 +122,12 @@
           @include flex(row, center, space-between);
           position: relative;
           width: 100%;
+
           .subtext {
             @include flex(column, flex-start, space-between);
             gap: 124px;
 
-            @include responsive(md) {
+            @include responsive(lg) {
               gap: 62px;
             }
 
@@ -140,7 +142,7 @@
               letter-spacing: 1.68px;
               max-width: 711px;
 
-              @include responsive(md) {
+              @include responsive(lg) {
                 font-size: 32px;
                 width: 80%;
                 line-height: 42px;
@@ -199,7 +201,8 @@
                     letter-spacing: 0.72px;
                     max-width: 241px;
                     margin-bottom: 28px;
-                    @include responsive(md) {
+
+                    @include responsive(lg) {
                       max-width: 100%;
                       margin-bottom: 18px;
                     }
@@ -225,7 +228,8 @@
                   img {
                     max-width: 116px;
                     max-height: 58px;
-                    @include responsive(md) {
+
+                    @include responsive(lg) {
                       max-height: unset;
                     }
                   }
@@ -238,6 +242,10 @@
             position: absolute;
             bottom: 0;
             right: -176px;
+
+            @include responsive(lg) {
+              display: none;
+            }
             @include responsive(sm) {
               display: none;
             }
@@ -248,7 +256,7 @@
               &-img {
                 max-width: 584px;
 
-                @include responsive(md) {
+                @include responsive(lg) {
                   max-width: 512px;
                 }
               }

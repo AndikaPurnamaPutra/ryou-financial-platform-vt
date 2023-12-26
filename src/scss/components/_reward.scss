@@ -7,7 +7,7 @@
       padding-bottom: 57px;
       position: relative;
 
-      @include responsive(md) {
+      @include responsive(lg) {
         align-items: flex-start;
         padding-top: 40px;
         padding-bottom: 30px;
@@ -19,7 +19,7 @@
           @include flex(column, flex-start, space-between);
           gap: 54px;
           z-index: 2;
-          @include responsive(md) {
+          @include responsive(lg) {
             gap: 32px;
           }
 
@@ -30,7 +30,7 @@
               &:nth-child(odd) {
                 flex-direction: column;
                 gap: 286px;
-                @include responsive(md) {
+                @include responsive(lg) {
                   gap: 16px;
                 }
               }
@@ -41,7 +41,7 @@
                 @include responsive(xl) {
                   gap: 92px;
                 }
-                @include responsive(md) {
+                @include responsive(lg) {
                   flex-direction: column;
                   align-items: flex-start;
                   gap: 16px;
@@ -56,7 +56,7 @@
                 font-weight: 400;
                 line-height: normal;
                 max-width: 491px;
-                @include responsive(md) {
+                @include responsive(lg) {
                   font-size: 16px;
                 }
               }
@@ -89,7 +89,7 @@
                 line-height: 52px;
                 /* 123.81% */
                 letter-spacing: 1.68px;
-                @include responsive(md) {
+                @include responsive(lg) {
                   font-size: 32px;
                 }
               }
@@ -106,7 +106,7 @@
             bottom: -10%;
             left: 52%;
 
-            @include responsive(md) {
+            @include responsive(lg) {
               position: relative;
             }
 

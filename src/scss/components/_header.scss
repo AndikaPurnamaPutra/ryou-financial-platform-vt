@@ -2,7 +2,7 @@
   background-color: $black;
   padding-block: 100px;
 
-  @include responsive(md) {
+  @include responsive(lg) {
     padding-block: 50px;
   }
 
@@ -13,7 +13,7 @@
       position: relative;
       z-index: 1;
 
-      @include responsive(md) {
+      @include responsive(lg) {
         gap: 24px;
       }
 
@@ -33,7 +33,7 @@
               line-height: 134px;
             }
 
-            @include responsive(md) {
+            @include responsive(lg) {
               font-size: 124px;
               line-height: 114px;
             }
@@ -48,7 +48,7 @@
         &-bottom {
           @include flex(row, center, space-between);
 
-          @include responsive(md) {
+          @include responsive(lg) {
             @include flex(column-reverse, flex-start, space-between);
             gap: 24px;
           }
@@ -57,7 +57,7 @@
             @include flex(column, flex-start, space-between);
             gap: 116px;
 
-            @include responsive(md) {
+            @include responsive(lg) {
               width: 60%;
             }
 
@@ -141,7 +141,7 @@
               gap: 20px;
             }
 
-            @include responsive(md) {
+            @include responsive(lg) {
               width: 80%;
             }
 
@@ -176,7 +176,7 @@
                     margin-bottom: -52px;
                   }
 
-                  @include responsive(md) {
+                  @include responsive(lg) {
                     margin-bottom: -48px;
                   }
                 }
@@ -237,7 +237,7 @@
                     width: 212px;
                   }
 
-                  @include responsive(md) {
+                  @include responsive(lg) {
                     width: 100%;
                   }
                 }

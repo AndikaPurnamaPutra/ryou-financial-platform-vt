@@ -1,13 +1,13 @@
 .section-benefit {
   padding-block: 100px;
-  @include responsive(md) {
+  @include responsive(lg) {
     padding-block: 50px;
   }
   .container {
     &-benefit {
       @include flex(column, center, center);
       gap: 70px;
-      @include responsive(md) {
+      @include responsive(lg) {
         gap: 54px;
       }
       .content {
@@ -16,7 +16,7 @@
             @include flex(column, center, center);
             gap: 16px;
             max-width: 816px;
-            @include responsive(md) {
+            @include responsive(lg) {
               max-width: 100%;
             }
             &-span {
@@ -40,7 +40,7 @@
               /* 123.81% */
               letter-spacing: 1.68px;
 
-              @include responsive(md) {
+              @include responsive(lg) {
                 font-size: 32px;
                 line-height: 42px;
               }
@@ -56,7 +56,7 @@
               line-height: 32px;
               /* 177.778% */
               letter-spacing: 0.72px;
-              @include responsive(md) {
+              @include responsive(lg) {
                   font-size: 16px;
                 }
             }
@@ -66,7 +66,7 @@
         &-bottom {
           @include flex(row, center, space-between);
           gap: 40px;
-          @include responsive(md) {
+          @include responsive(lg) {
             gap: 20px;
           }
           @include responsive(sm) {
@@ -96,7 +96,7 @@
               /* 137.5% */
               max-width: 255px;
 
-              @include responsive(md) {
+              @include responsive(lg) {
                 font-size: 26px;
                 line-height: 32px;
               }

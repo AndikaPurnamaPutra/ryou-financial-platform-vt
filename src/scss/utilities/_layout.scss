@@ -36,7 +36,7 @@ section{
   @include responsive(xl) {
     padding-inline: 50px;
   }
-  @include responsive(md){
+  @include responsive(lg){
       flex-direction: column;
       padding-inline: 20px;
   }

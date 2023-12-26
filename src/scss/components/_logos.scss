@@ -1,7 +1,14 @@
 .section-logos {
     padding-block: 40px;
+
     .container {
         &-logos {
+            flex-wrap: wrap;
+            justify-content: center;
+            @include responsive(lg) {
+                flex-direction: row;
+            }
+
             .logos {
                 &-img {
                     max-width: 192px;

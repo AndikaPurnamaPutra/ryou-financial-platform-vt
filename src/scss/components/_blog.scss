@@ -1,7 +1,7 @@
 .section-blogs {
   padding-block: 150px;
 
-  @include responsive(md) {
+  @include responsive(lg) {
     padding-block: 75px;
   }
   .container {
@@ -17,7 +17,7 @@
           border-bottom: 1px solid rgba($color: #000000, $alpha: 0.1);
           padding-bottom: 60px;
 
-          @include responsive(md) {
+          @include responsive(lg) {
             padding-bottom: 30px;
           }
 
@@ -46,7 +46,7 @@
             row-gap: 60px;
             column-gap: 84px;
 
-            @include responsive(md) {
+            @include responsive(lg) {
               grid-template-columns: repeat(2, 1fr);
               row-gap: 30px;
               column-gap: 42px;
@@ -60,7 +60,7 @@
               max-width: 287px;
               @include flex(column, flex-start, space-between);
 
-              @include responsive(md) {
+              @include responsive(lg) {
                 max-width: 100%;
               }
 
@@ -75,7 +75,7 @@
                   margin-top: 20px;
                   margin-bottom: 40px;
 
-                  @include responsive(md) {
+                  @include responsive(lg) {
                     font-size: 18px;
                   }
                 }
